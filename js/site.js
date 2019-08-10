@@ -51,9 +51,14 @@ function checkHeight()
     }
     else
     {
-      heightOtherNews = document.getElementById("videos").clientHeight + 
-                document.getElementById("headlineNews").clientHeight +
-                document.getElementById("otherNews").clientHeight;
+      // heightOtherNews = document.getElementById("videos").clientHeight + 
+      //           document.getElementById("headlineNews").clientHeight +
+      //           document.getElementById("otherNews").clientHeight;
+       heightOtherNews = 
+        Math.max(document.getElementById("videos").clientHeight, 
+        document.getElementById("headlineNews").clientHeight, 
+        document.getElementById("otherNews").clientHeight,
+        document.getElementById("main").clientHeight);
     
       footerTop = heightOtherNews + 220;
     }
